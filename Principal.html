@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zona Gamer</title>
+  <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+<header class="fade-in">
+  <h1>ZONA GAMER</h1>
+  </header>
+
+  <nav>
+    <a href="#inicio">INICIO</a>
+    <a href="#juegos">JUEGOS</a>
+    <a href="#tips">TIPS</a>
+    <a href="#contacto">CONTACTO</a>
+  </nav>
+
+  <div class="herramientas">
+    <button onclick="cambiarTema()">🌗 Cambiar Tema</button>
+  </div>
+
+  <audio id="sonidoGamer" src="https://www.myinstants.com/media/sounds/i-hope-you-die-in-a-fire.mp3"></audio>
+
+  <section id="inicio" class="fade-in">
+    <h2>Bienvenido a Zona Gamer, tu página especializada en juegos, noticias y más! 🎮</h2>
+    <p>Explora los mejores juegos, descubre tips y comparte tu experiencia gamer con la comunidad.</p>
+  </section>
+
+  <section id="juegos" class="fade-in">
+  <h2>🔥 Juegos del Momento</h2>
+  <div class="games">
+    <a class="game-card" href="Minecraft GameCard.html">
+      <img src="https://image.api.playstation.com/vulcan/ap/rnd/202407/0401/670c294ded3baf4fa11068db2ec6758c63f7daeb266a35a1.png" alt="Minecraft" />
+      <h3>Minecraft</h3>
+      <p>Construye, explora y sobrevive en un mundo infinito.</p>
+    </a>
+
+    <a class="game-card" href="COD GameCard.html">
+      <img src="https://gmedia.playstation.com/is/image/SIEPDC/call-of-duty-franchise-hub-keyart-01-en-21nov23?$facebook$" alt="Call Of Duty" />
+      <h3>Call Of Duty</h3>
+      <p>Juego de batalla rápida y multijugador. ¡Sobrevive y gana!</p>
+      <p>Vive la experiencia más realista en la historía militar y adéntrate a un mundo abierto lleno de muchas adversidades</p>
+    </a>
+
+    <a class="game-card" href="Fifa24.html">
+      <img src="https://image.api.playstation.com/vulcan/ap/rnd/202408/0817/4248a0d1a669210e5caf5174eda176c7883be2c9089fa106.png" alt="FIFA 24" />
+      <h3>FIFA 24</h3>
+      <p>Lo último en simulación de fútbol. Compite como profesional.</p>
+    </a>
+  </div>
+</section>
+
+  <section id="tips" class="fade-in">
+    <h2>🎯 Trucos y Tips</h2>
+    <ul>
+      <li>🎮 Configura los controles a tu estilo para reaccionar más rápido.</li>
+      <li>🕹️ Usa audífonos para detectar mejor a tus enemigos.</li>
+      <li>🎯 Ajusta la sensibilidad del mouse o joystick según tu comodidad.</li>
+      <li>⚙️ Baja los gráficos para mejorar rendimiento si tu equipo es lento.</li>
+    </ul>
+  </section>
+
+  <section id="contacto" class="fade-in">
+    <h2>📬 Contáctame</h2>
+    <form>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" placeholder="Tu nombre" required>
+
+      <label for="email">Correo:</label>
+      <input type="email" id="email" placeholder="Tu correo" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" placeholder="Escribe tu mensaje..." rows="4" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Zona Gamer. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    function cambiarTema() {
+      document.body.classList.toggle('claro');
+      if (document.body.classList.contains('claro')) {
+        localStorage.setItem('tema', 'claro');
+      } else {
+        localStorage.removeItem('tema');
+      }
+    }
+</script>
+
+</body>
+</html>
